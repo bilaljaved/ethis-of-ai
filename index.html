@@ -8,6 +8,8 @@
     :root{
       --bg:#0b1020; --fg:#eef2ff; --muted:#b8c0ff; --card:#121a33; --accent:#7aa2ff;
       --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --exbg: rgba(122,162,255,.10);
+      --exbd: rgba(122,162,255,.25);
     }
     html,body{height:100%; margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       background: radial-gradient(1200px 800px at 30% 20%, #18224b, var(--bg)); color:var(--fg);
@@ -42,6 +44,13 @@
     .speaker .role{color:var(--muted); font-size:16px; margin-top:4px;}
     .ur .speaker .name{font-size:24px;}
 
+    .example{margin-top:16px; padding:12px 12px; border:1px solid var(--exbd); background:var(--exbg); border-radius:12px;}
+    .example .label{display:inline-block; font-weight:800; font-size:12px; letter-spacing:.5px; text-transform:uppercase;
+      padding:4px 8px; border-radius:999px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.10);
+    }
+    .example .text{margin-top:10px; font-size:18px; line-height:1.4;}
+    .ur .example .label{text-transform:none; letter-spacing:0; font-size:13px;}
+
     footer{padding:12px 18px; display:flex; align-items:center; gap:10px; border-top:1px solid rgba(255,255,255,.08);}
     button{background:rgba(122,162,255,.18); color:var(--fg); border:1px solid rgba(122,162,255,.35);
       border-radius:10px; padding:10px 14px; font-size:14px; cursor:pointer;
@@ -55,6 +64,7 @@
       h2{font-size:26px;}
       li{font-size:18px;}
       .ur h2{font-size:28px;}
+      .example .text{font-size:17px;}
     }
 
     @media print{
@@ -96,6 +106,10 @@
             <ul>
               <li>A teacher-focused guide</li><li>Opportunities, risks, and responsible classroom use</li>
             </ul>
+            <div class="example">
+  <div class="label">Example</div>
+  <div class="text">A school introduces an AI chatbot to help teachers prepare lesson plans faster, but teachers still decide how content is taught.</div>
+</div>
             <div class="speaker">
   <div class="name">Muhammad Bilal</div>
   <div class="role">Head of AI and Data Platforms</div>
@@ -106,6 +120,10 @@
             <ul>
               <li>اساتذہ کے لیے رہنمائی</li><li>مواقع، خطرات اور ذمہ دارانہ استعمال</li>
             </ul>
+            <div class="example">
+  <div class="label">مثال</div>
+  <div class="text">ایک اسکول اساتذہ کی مدد کے لیے AI چیٹ بوٹ استعمال کرتا ہے تاکہ سبق تیزی سے تیار ہوں، لیکن پڑھانے کا حتمی فیصلہ استاد ہی کرتا ہے۔</div>
+</div>
             <div class="speaker">
   <div class="name">محمد بلال</div>
   <div class="role">ہیڈ آف اے آئی اینڈ ڈیٹا پلیٹ فارمز</div>
@@ -121,6 +139,10 @@
             <ul>
               <li>AI is a support tool, not a replacement for teachers</li><li>Use cases: planning, feedback, differentiation, admin support</li><li>Human judgment stays central</li>
             </ul>
+            <div class="example">
+  <div class="label">Example</div>
+  <div class="text">A teacher uses AI to generate quiz questions but reviews and edits them before giving them to students.</div>
+</div>
             
           </div>
           <div class="pane ur" lang="ur">
@@ -128,6 +150,10 @@
             <ul>
               <li>AI استاد کا متبادل نہیں بلکہ معاون ہے</li><li>استعمال: منصوبہ بندی، فیڈبیک، مختلف سطحوں کے مطابق تدریس، انتظامی مدد</li><li>انسانی فیصلہ سازی مرکزی رہے</li>
             </ul>
+            <div class="example">
+  <div class="label">مثال</div>
+  <div class="text">ایک استاد AI سے کوئز سوالات بنواتا ہے، مگر طلبہ کو دینے سے پہلے خود ان کا جائزہ لیتا ہے۔</div>
+</div>
             
           </div>
         </div>
@@ -140,6 +166,10 @@
             <ul>
               <li>Teachers influence grades, feedback, and student opportunities</li><li>AI can be wrong or biased</li><li>Ethical use protects trust and learning outcomes</li>
             </ul>
+            <div class="example">
+  <div class="label">Example</div>
+  <div class="text">An AI tool recommends extra support for certain students, but the teacher notices it ignores effort and motivation.</div>
+</div>
             
           </div>
           <div class="pane ur" lang="ur">
@@ -147,6 +177,10 @@
             <ul>
               <li>اساتذہ گریڈز، فیڈبیک اور مواقع پر اثر ڈالتے ہیں</li><li>AI غلطی یا تعصب کا شکار ہو سکتا ہے</li><li>اخلاقی استعمال اعتماد اور سیکھنے کے نتائج کو محفوظ بناتا ہے</li>
             </ul>
+            <div class="example">
+  <div class="label">مثال</div>
+  <div class="text">AI کچھ طلبہ کے لیے اضافی مدد تجویز کرتا ہے، لیکن استاد دیکھتا ہے کہ یہ طلبہ کی محنت اور دلچسپی کو نظرانداز کر رہا ہے۔</div>
+</div>
             
           </div>
         </div>
@@ -159,6 +193,10 @@
             <ul>
               <li>Fairness: equal treatment and inclusive design</li><li>Transparency: disclose when/how AI is used</li><li>Accountability: humans remain responsible</li><li>Privacy: minimize and protect student data</li><li>Human oversight: AI advises; teachers decide</li>
             </ul>
+            <div class="example">
+  <div class="label">Example</div>
+  <div class="text">A teacher tells students when AI is used for grading and explains how final marks are decided.</div>
+</div>
             
           </div>
           <div class="pane ur" lang="ur">
@@ -166,6 +204,10 @@
             <ul>
               <li>انصاف: مساوی سلوک اور شمولیتی ڈیزائن</li><li>شفافیت: AI کب/کیسے استعمال ہو رہا ہے واضح کریں</li><li>جوابدہی: ذمہ داری انسان کی رہے</li><li>پرائیویسی: طلبہ کے ڈیٹا کو کم سے کم اور محفوظ رکھیں</li><li>انسانی نگرانی: AI مشورہ دے، فیصلہ استاد کرے</li>
             </ul>
+            <div class="example">
+  <div class="label">مثال</div>
+  <div class="text">استاد طلبہ کو بتاتا ہے کہ گریڈنگ میں AI کہاں استعمال ہوا ہے اور حتمی نمبر کیسے طے کیے جاتے ہیں۔</div>
+</div>
             
           </div>
         </div>
@@ -178,6 +220,10 @@
             <ul>
               <li>AI learns from historical data and may reproduce inequities</li><li>Watch for language, cultural, gender, disability-related bias</li><li>Always review outputs—especially in high-stakes decisions</li>
             </ul>
+            <div class="example">
+  <div class="label">Example</div>
+  <div class="text">An AI writing checker gives lower scores to students whose first language is not English.</div>
+</div>
             
           </div>
           <div class="pane ur" lang="ur">
@@ -185,6 +231,10 @@
             <ul>
               <li>AI ماضی کے ڈیٹا سے سیکھتا ہے اور عدم مساوات دوہرا سکتا ہے</li><li>زبان، ثقافت، جنس، معذوری وغیرہ سے متعلق تعصب پر نظر رکھیں</li><li>خصوصاً اہم فیصلوں میں نتائج کا لازماً انسانی جائزہ لیں</li>
             </ul>
+            <div class="example">
+  <div class="label">مثال</div>
+  <div class="text">ایک AI رائٹنگ ٹول غیر انگریزی پس منظر کے طلبہ کو کم نمبر دیتا ہے، حالانکہ خیالات مضبوط ہوتے ہیں۔</div>
+</div>
             
           </div>
         </div>
@@ -197,6 +247,10 @@
             <ul>
               <li>Pros: speed, consistency, formative feedback</li><li>Risks: incorrect scoring, shallow feedback, hidden bias</li><li>Practice: teacher checks samples; allow appeals; explain criteria</li>
             </ul>
+            <div class="example">
+  <div class="label">Example</div>
+  <div class="text">AI provides quick feedback on essays, but the teacher adds personalized comments for improvement.</div>
+</div>
             
           </div>
           <div class="pane ur" lang="ur">
@@ -204,6 +258,10 @@
             <ul>
               <li>فوائد: وقت کی بچت، یکسانیت، فوری formative فیڈبیک</li><li>خطرات: غلط اسکورنگ، سطحی فیڈبیک، پوشیدہ تعصب</li><li>طریقہ: نمونوں کی جانچ استاد کرے، اعتراض/اپیل کا حق دیں، معیار واضح کریں</li>
             </ul>
+            <div class="example">
+  <div class="label">مثال</div>
+  <div class="text">AI مضمون پر فوری فیڈبیک دیتا ہے، مگر استاد ذاتی رہنمائی بھی شامل کرتا ہے۔</div>
+</div>
             
           </div>
         </div>
@@ -216,6 +274,10 @@
             <ul>
               <li>Collect only what is necessary (data minimization)</li><li>Avoid sharing identifiable student data into public tools</li><li>Follow school policy and legal requirements (e.g., GDPR)</li><li>Be transparent with students and parents</li>
             </ul>
+            <div class="example">
+  <div class="label">Example</div>
+  <div class="text">A teacher avoids uploading student names into public AI tools and uses anonymous IDs instead.</div>
+</div>
             
           </div>
           <div class="pane ur" lang="ur">
@@ -223,6 +285,10 @@
             <ul>
               <li>صرف ضروری ڈیٹا لیں (کم سے کم ڈیٹا)</li><li>عوامی ٹولز میں شناختی معلومات شیئر نہ کریں</li><li>ادارہ جاتی پالیسی اور قوانین (مثلاً GDPR) پر عمل کریں</li><li>طلبہ اور والدین کو آگاہ رکھیں</li>
             </ul>
+            <div class="example">
+  <div class="label">مثال</div>
+  <div class="text">استاد طلبہ کے نام عوامی AI ٹولز میں ڈالنے کے بجائے anonymized IDs استعمال کرتا ہے۔</div>
+</div>
             
           </div>
         </div>
@@ -235,6 +301,10 @@
             <ul>
               <li>Clarify what AI assistance is allowed for each task</li><li>Design assessments that require reasoning, reflection, and process evidence</li><li>Teach citation, disclosure, and responsible tool use</li>
             </ul>
+            <div class="example">
+  <div class="label">Example</div>
+  <div class="text">Students are allowed to use AI for brainstorming ideas but must write final answers in their own words.</div>
+</div>
             
           </div>
           <div class="pane ur" lang="ur">
@@ -242,6 +312,10 @@
             <ul>
               <li>ہر کام کے لیے واضح کریں کہ AI کی کس حد تک اجازت ہے</li><li>ایسے اسیسمنٹس بنائیں جن میں دلیل، غوروفکر اور عمل کا ثبوت ہو</li><li>حوالہ، انکشاف (disclosure) اور ذمہ دار استعمال سکھائیں</li>
             </ul>
+            <div class="example">
+  <div class="label">مثال</div>
+  <div class="text">طلبہ کو آئیڈیاز سوچنے کے لیے AI استعمال کرنے کی اجازت ہے، مگر حتمی جواب خود لکھنا ضروری ہے۔</div>
+</div>
             
           </div>
         </div>
@@ -254,6 +328,10 @@
             <ul>
               <li>Education is human-centered: care, motivation, and mentorship</li><li>Use AI to save time, then reinvest time into students</li><li>Avoid replacing meaningful feedback with automated text</li>
             </ul>
+            <div class="example">
+  <div class="label">Example</div>
+  <div class="text">AI saves time on administrative tasks, so the teacher spends more time mentoring struggling students.</div>
+</div>
             
           </div>
           <div class="pane ur" lang="ur">
@@ -261,6 +339,10 @@
             <ul>
               <li>تعلیم انسان مرکز ہے: توجہ، حوصلہ افزائی اور رہنمائی</li><li>AI سے وقت بچا کر طلبہ کو زیادہ وقت دیں</li><li>معنی خیز فیڈبیک کی جگہ خودکار متن نہ آنے دیں</li>
             </ul>
+            <div class="example">
+  <div class="label">مثال</div>
+  <div class="text">AI انتظامی کام آسان بناتا ہے، جس سے استاد کمزور طلبہ کو زیادہ وقت دے سکتا ہے۔</div>
+</div>
             
           </div>
         </div>
@@ -273,6 +355,10 @@
             <ul>
               <li>Not all students have equal access to devices or paid AI tools</li><li>Provide alternatives and in-class support</li><li>Ensure accommodations for learners with diverse needs</li>
             </ul>
+            <div class="example">
+  <div class="label">Example</div>
+  <div class="text">A teacher does not require AI tools for homework because not all students have internet access at home.</div>
+</div>
             
           </div>
           <div class="pane ur" lang="ur">
@@ -280,6 +366,10 @@
             <ul>
               <li>ہر طالب علم کے پاس ڈیوائس یا مہنگے AI ٹولز تک برابر رسائی نہیں</li><li>متبادل طریقے اور کلاس میں مدد فراہم کریں</li><li>مختلف ضروریات والے طلبہ کے لیے سہولتیں یقینی بنائیں</li>
             </ul>
+            <div class="example">
+  <div class="label">مثال</div>
+  <div class="text">استاد ہوم ورک کے لیے AI لازمی نہیں بناتا کیونکہ ہر طالب علم کے پاس گھر پر انٹرنیٹ نہیں ہوتا۔</div>
+</div>
             
           </div>
         </div>
@@ -292,6 +382,10 @@
             <ul>
               <li>Disclose AI use and set classroom norms</li><li>Verify outputs; don’t outsource final judgments</li><li>Protect privacy; avoid sensitive data</li><li>Monitor bias and document decisions</li><li>Keep learning: training and peer-sharing</li>
             </ul>
+            <div class="example">
+  <div class="label">Example</div>
+  <div class="text">Before using a new AI tool, the teacher asks: “Does this help learning, or just save time?”</div>
+</div>
             
           </div>
           <div class="pane ur" lang="ur">
@@ -299,6 +393,10 @@
             <ul>
               <li>AI استعمال واضح کریں اور کلاس کے اصول طے کریں</li><li>نتائج کی تصدیق کریں؛ حتمی فیصلہ خود کریں</li><li>پرائیویسی کا تحفظ کریں؛ حساس ڈیٹا سے گریز</li><li>تعصب پر نظر رکھیں اور فیصلوں کی دستاویز بنائیں</li><li>سیکھتے رہیں: تربیت اور ساتھیوں سے شیئرنگ</li>
             </ul>
+            <div class="example">
+  <div class="label">مثال</div>
+  <div class="text">نیا AI ٹول استعمال کرنے سے پہلے استاد خود سے سوال کرتا ہے: “کیا یہ واقعی سیکھنے میں مدد دے رہا ہے؟”</div>
+</div>
             
           </div>
         </div>
@@ -311,6 +409,10 @@
             <ul>
               <li>AI can enhance learning when used responsibly</li><li>Ethical teaching with AI requires judgment, transparency, and care</li><li>Goal: better learning with dignity, fairness, and trust</li>
             </ul>
+            <div class="example">
+  <div class="label">Example</div>
+  <div class="text">In a responsible classroom, AI supports learning, but values, empathy, and fairness come from teachers.</div>
+</div>
             
           </div>
           <div class="pane ur" lang="ur">
@@ -318,6 +420,10 @@
             <ul>
               <li>ذمہ دار استعمال کے ساتھ AI سیکھنے کو بہتر بنا سکتا ہے</li><li>اخلاقی استعمال کے لیے بصیرت، شفافیت اور خیال ضروری ہے</li><li>مقصد: عزت، انصاف اور اعتماد کے ساتھ بہتر تعلیم</li>
             </ul>
+            <div class="example">
+  <div class="label">مثال</div>
+  <div class="text">ذمہ دار کلاس روم میں AI سیکھنے میں مدد دیتا ہے، مگر اقدار، ہمدردی اور انصاف استاد فراہم کرتا ہے۔</div>
+</div>
             
           </div>
         </div>
