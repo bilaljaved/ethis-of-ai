@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ethics of AI — Bilingual (EN/UR)</title>
+  <style>
+    :root{
+      --bg:#0b1020; --fg:#eef2ff; --muted:#b8c0ff; --card:#121a33; --accent:#7aa2ff;
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%; margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 30% 20%, #18224b, var(--bg)); color:var(--fg);
+    }
+    .deck{height:100%; display:flex; flex-direction:column;}
+    header{padding:14px 18px; display:flex; align-items:center; gap:12px; border-bottom:1px solid rgba(255,255,255,.08);}
+    header .title{font-weight:800; letter-spacing:.2px;}
+    header .hint{color:var(--muted); font-size:12px; margin-left:auto;}
+    header .logo{filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));}
+
+    main{flex:1; display:flex; align-items:center; justify-content:center; padding:20px;}
+    .slide{width:min(1100px, 96vw); min-height:min(640px, 76vh); background:rgba(18,26,51,.92);
+      border:1px solid rgba(255,255,255,.10); border-radius:18px; box-shadow:var(--shadow); padding:28px; display:none;
+    }
+    .slide.active{display:block;}
+
+    .grid{display:grid; grid-template-columns: 1fr 1fr; gap:22px; height:100%;}
+    .pane{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:18px 18px 16px; overflow:auto;}
+
+    h2{margin:0 0 10px; font-size:30px; line-height:1.15;}
+    ul{margin:10px 0 0 20px; padding:0;}
+    li{margin:10px 0; font-size:20px; line-height:1.35;}
+
+    .en h2, .en li{direction:ltr; text-align:left;}
+
+    .ur{direction:rtl; text-align:right; font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Noto Naskh Arabic", "Segoe UI", Tahoma, Arial, sans-serif;}
+    .ur h2{font-size:32px;}
+    .ur ul{margin:10px 20px 0 0;}
+
+    .speaker{margin-top:18px; padding-top:14px; border-top:1px solid rgba(255,255,255,.10);}
+    .speaker .name{font-weight:900; font-size:22px;}
+    .speaker .role{color:var(--muted); font-size:16px; margin-top:4px;}
+    .ur .speaker .name{font-size:24px;}
+
+    footer{padding:12px 18px; display:flex; align-items:center; gap:10px; border-top:1px solid rgba(255,255,255,.08);}
+    button{background:rgba(122,162,255,.18); color:var(--fg); border:1px solid rgba(122,162,255,.35);
+      border-radius:10px; padding:10px 14px; font-size:14px; cursor:pointer;
+    }
+    button:hover{background:rgba(122,162,255,.28);}
+    .counter{margin-left:auto; color:var(--muted); font-size:13px;}
+
+    @media (max-width: 820px){
+      .grid{grid-template-columns:1fr;}
+      .slide{padding:18px;}
+      h2{font-size:26px;}
+      li{font-size:18px;}
+      .ur h2{font-size:28px;}
+    }
+
+    @media print{
+      header, footer{display:none;}
+      body{background:white; color:black;}
+      .slide{display:block; page-break-after:always; box-shadow:none; border:1px solid #ddd;}
+      .pane{background:white; border:1px solid #eee;}
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <header>
+      <svg class="logo" width="30" height="30" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7aa2ff"/>
+      <stop offset="1" stop-color="#c77dff"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="none" stroke="url(#g)" stroke-width="4"/>
+  <path d="M32 14v36" stroke="#eef2ff" stroke-width="3" opacity=".95"/>
+  <path d="M20 24h24" stroke="#eef2ff" stroke-width="3" opacity=".95"/>
+  <path d="M18 42c6-6 22-6 28 0" fill="none" stroke="#eef2ff" stroke-width="3" opacity=".95"/>
+  <circle cx="20" cy="24" r="3" fill="#eef2ff"/>
+  <circle cx="44" cy="24" r="3" fill="#eef2ff"/>
+  <circle cx="32" cy="50" r="3" fill="#eef2ff"/>
+</svg>
+      <div class="title">Ethics of AI — Side-by-side English & Urdu</div>
+      <div class="hint">Use ◀ ▶ keys or buttons</div>
+    </header>
+
+    <main id="slides">
+
+      <section class="slide active" data-index="0">
+        <div class="grid">
+          <div class="pane en">
+            <h2>Ethics of AI</h2>
+            <ul>
+              <li>A teacher-focused guide</li><li>Opportunities, risks, and responsible classroom use</li>
+            </ul>
+            <div class="speaker">
+  <div class="name">Muhammad Bilal</div>
+  <div class="role">Head of AI and Data Platforms</div>
+</div>
+          </div>
+          <div class="pane ur" lang="ur">
+            <h2>AI کے اخلاقی پہلو</h2>
+            <ul>
+              <li>اساتذہ کے لیے رہنمائی</li><li>مواقع، خطرات اور ذمہ دارانہ استعمال</li>
+            </ul>
+            <div class="speaker">
+  <div class="name">محمد بلال</div>
+  <div class="role">ہیڈ آف اے آئی اینڈ ڈیٹا پلیٹ فارمز</div>
+</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-index="1">
+        <div class="grid">
+          <div class="pane en">
+            <h2>Teachers & AI — The New Role</h2>
+            <ul>
+              <li>AI is a support tool, not a replacement for teachers</li><li>Use cases: planning, feedback, differentiation, admin support</li><li>Human judgment stays central</li>
+            </ul>
+            
+          </div>
+          <div class="pane ur" lang="ur">
+            <h2>اساتذہ اور AI — نیا کردار</h2>
+            <ul>
+              <li>AI استاد کا متبادل نہیں بلکہ معاون ہے</li><li>استعمال: منصوبہ بندی، فیڈبیک، مختلف سطحوں کے مطابق تدریس، انتظامی مدد</li><li>انسانی فیصلہ سازی مرکزی رہے</li>
+            </ul>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-index="2">
+        <div class="grid">
+          <div class="pane en">
+            <h2>Why Ethics Matters for Teachers</h2>
+            <ul>
+              <li>Teachers influence grades, feedback, and student opportunities</li><li>AI can be wrong or biased</li><li>Ethical use protects trust and learning outcomes</li>
+            </ul>
+            
+          </div>
+          <div class="pane ur" lang="ur">
+            <h2>اخلاقیات اساتذہ کے لیے کیوں اہم ہیں؟</h2>
+            <ul>
+              <li>اساتذہ گریڈز، فیڈبیک اور مواقع پر اثر ڈالتے ہیں</li><li>AI غلطی یا تعصب کا شکار ہو سکتا ہے</li><li>اخلاقی استعمال اعتماد اور سیکھنے کے نتائج کو محفوظ بناتا ہے</li>
+            </ul>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-index="3">
+        <div class="grid">
+          <div class="pane en">
+            <h2>Core Ethical Principles</h2>
+            <ul>
+              <li>Fairness: equal treatment and inclusive design</li><li>Transparency: disclose when/how AI is used</li><li>Accountability: humans remain responsible</li><li>Privacy: minimize and protect student data</li><li>Human oversight: AI advises; teachers decide</li>
+            </ul>
+            
+          </div>
+          <div class="pane ur" lang="ur">
+            <h2>بنیادی اخلاقی اصول</h2>
+            <ul>
+              <li>انصاف: مساوی سلوک اور شمولیتی ڈیزائن</li><li>شفافیت: AI کب/کیسے استعمال ہو رہا ہے واضح کریں</li><li>جوابدہی: ذمہ داری انسان کی رہے</li><li>پرائیویسی: طلبہ کے ڈیٹا کو کم سے کم اور محفوظ رکھیں</li><li>انسانی نگرانی: AI مشورہ دے، فیصلہ استاد کرے</li>
+            </ul>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-index="4">
+        <div class="grid">
+          <div class="pane en">
+            <h2>Bias & Fairness Risks</h2>
+            <ul>
+              <li>AI learns from historical data and may reproduce inequities</li><li>Watch for language, cultural, gender, disability-related bias</li><li>Always review outputs—especially in high-stakes decisions</li>
+            </ul>
+            
+          </div>
+          <div class="pane ur" lang="ur">
+            <h2>تعصب اور انصاف کے خطرات</h2>
+            <ul>
+              <li>AI ماضی کے ڈیٹا سے سیکھتا ہے اور عدم مساوات دوہرا سکتا ہے</li><li>زبان، ثقافت، جنس، معذوری وغیرہ سے متعلق تعصب پر نظر رکھیں</li><li>خصوصاً اہم فیصلوں میں نتائج کا لازماً انسانی جائزہ لیں</li>
+            </ul>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-index="5">
+        <div class="grid">
+          <div class="pane en">
+            <h2>AI for Grading & Feedback</h2>
+            <ul>
+              <li>Pros: speed, consistency, formative feedback</li><li>Risks: incorrect scoring, shallow feedback, hidden bias</li><li>Practice: teacher checks samples; allow appeals; explain criteria</li>
+            </ul>
+            
+          </div>
+          <div class="pane ur" lang="ur">
+            <h2>گریڈنگ اور فیڈبیک میں AI</h2>
+            <ul>
+              <li>فوائد: وقت کی بچت، یکسانیت، فوری formative فیڈبیک</li><li>خطرات: غلط اسکورنگ، سطحی فیڈبیک، پوشیدہ تعصب</li><li>طریقہ: نمونوں کی جانچ استاد کرے، اعتراض/اپیل کا حق دیں، معیار واضح کریں</li>
+            </ul>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-index="6">
+        <div class="grid">
+          <div class="pane en">
+            <h2>Student Data & Privacy</h2>
+            <ul>
+              <li>Collect only what is necessary (data minimization)</li><li>Avoid sharing identifiable student data into public tools</li><li>Follow school policy and legal requirements (e.g., GDPR)</li><li>Be transparent with students and parents</li>
+            </ul>
+            
+          </div>
+          <div class="pane ur" lang="ur">
+            <h2>طلبہ کا ڈیٹا اور پرائیویسی</h2>
+            <ul>
+              <li>صرف ضروری ڈیٹا لیں (کم سے کم ڈیٹا)</li><li>عوامی ٹولز میں شناختی معلومات شیئر نہ کریں</li><li>ادارہ جاتی پالیسی اور قوانین (مثلاً GDPR) پر عمل کریں</li><li>طلبہ اور والدین کو آگاہ رکھیں</li>
+            </ul>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-index="7">
+        <div class="grid">
+          <div class="pane en">
+            <h2>Academic Integrity in the AI Era</h2>
+            <ul>
+              <li>Clarify what AI assistance is allowed for each task</li><li>Design assessments that require reasoning, reflection, and process evidence</li><li>Teach citation, disclosure, and responsible tool use</li>
+            </ul>
+            
+          </div>
+          <div class="pane ur" lang="ur">
+            <h2>AI کے دور میں تعلیمی دیانت</h2>
+            <ul>
+              <li>ہر کام کے لیے واضح کریں کہ AI کی کس حد تک اجازت ہے</li><li>ایسے اسیسمنٹس بنائیں جن میں دلیل، غوروفکر اور عمل کا ثبوت ہو</li><li>حوالہ، انکشاف (disclosure) اور ذمہ دار استعمال سکھائیں</li>
+            </ul>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-index="8">
+        <div class="grid">
+          <div class="pane en">
+            <h2>Teacher–Student Relationships</h2>
+            <ul>
+              <li>Education is human-centered: care, motivation, and mentorship</li><li>Use AI to save time, then reinvest time into students</li><li>Avoid replacing meaningful feedback with automated text</li>
+            </ul>
+            
+          </div>
+          <div class="pane ur" lang="ur">
+            <h2>استاد اور طلبہ کے تعلقات</h2>
+            <ul>
+              <li>تعلیم انسان مرکز ہے: توجہ، حوصلہ افزائی اور رہنمائی</li><li>AI سے وقت بچا کر طلبہ کو زیادہ وقت دیں</li><li>معنی خیز فیڈبیک کی جگہ خودکار متن نہ آنے دیں</li>
+            </ul>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-index="9">
+        <div class="grid">
+          <div class="pane en">
+            <h2>Equity & Access</h2>
+            <ul>
+              <li>Not all students have equal access to devices or paid AI tools</li><li>Provide alternatives and in-class support</li><li>Ensure accommodations for learners with diverse needs</li>
+            </ul>
+            
+          </div>
+          <div class="pane ur" lang="ur">
+            <h2>مساوات اور رسائی</h2>
+            <ul>
+              <li>ہر طالب علم کے پاس ڈیوائس یا مہنگے AI ٹولز تک برابر رسائی نہیں</li><li>متبادل طریقے اور کلاس میں مدد فراہم کریں</li><li>مختلف ضروریات والے طلبہ کے لیے سہولتیں یقینی بنائیں</li>
+            </ul>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-index="10">
+        <div class="grid">
+          <div class="pane en">
+            <h2>Practical Checklist for Teachers</h2>
+            <ul>
+              <li>Disclose AI use and set classroom norms</li><li>Verify outputs; don’t outsource final judgments</li><li>Protect privacy; avoid sensitive data</li><li>Monitor bias and document decisions</li><li>Keep learning: training and peer-sharing</li>
+            </ul>
+            
+          </div>
+          <div class="pane ur" lang="ur">
+            <h2>اساتذہ کے لیے عملی چیک لسٹ</h2>
+            <ul>
+              <li>AI استعمال واضح کریں اور کلاس کے اصول طے کریں</li><li>نتائج کی تصدیق کریں؛ حتمی فیصلہ خود کریں</li><li>پرائیویسی کا تحفظ کریں؛ حساس ڈیٹا سے گریز</li><li>تعصب پر نظر رکھیں اور فیصلوں کی دستاویز بنائیں</li><li>سیکھتے رہیں: تربیت اور ساتھیوں سے شیئرنگ</li>
+            </ul>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-index="11">
+        <div class="grid">
+          <div class="pane en">
+            <h2>Closing</h2>
+            <ul>
+              <li>AI can enhance learning when used responsibly</li><li>Ethical teaching with AI requires judgment, transparency, and care</li><li>Goal: better learning with dignity, fairness, and trust</li>
+            </ul>
+            
+          </div>
+          <div class="pane ur" lang="ur">
+            <h2>اختتام</h2>
+            <ul>
+              <li>ذمہ دار استعمال کے ساتھ AI سیکھنے کو بہتر بنا سکتا ہے</li><li>اخلاقی استعمال کے لیے بصیرت، شفافیت اور خیال ضروری ہے</li><li>مقصد: عزت، انصاف اور اعتماد کے ساتھ بہتر تعلیم</li>
+            </ul>
+            
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <button id="prev">◀ Previous</button>
+      <button id="next">Next ▶</button>
+      <button id="fs">Full Screen</button>
+      <div class="counter" id="counter"></div>
+    </footer>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    let idx = 0;
+
+    function show(i){
+      idx = Math.max(0, Math.min(slides.length-1, i));
+      slides.forEach((s, n) => s.classList.toggle('active', n===idx));
+      document.getElementById('counter').textContent = `Slide ${idx+1} / ${slides.length}`;
+      history.replaceState(null, '', `#${idx+1}`);
+    }
+
+    function next(){ show(idx+1); }
+    function prev(){ show(idx-1); }
+
+    document.getElementById('next').addEventListener('click', next);
+    document.getElementById('prev').addEventListener('click', prev);
+
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'ArrowRight' || e.key === 'PageDown') next();
+      if(e.key === 'ArrowLeft' || e.key === 'PageUp') prev();
+      if(e.key === 'Home') show(0);
+      if(e.key === 'End') show(slides.length-1);
+      if(e.key.toLowerCase() === 'f') toggleFullScreen();
+    });
+
+    function toggleFullScreen(){
+      if(!document.fullscreenElement){
+        document.documentElement.requestFullscreen?.();
+      }else{
+        document.exitFullscreen?.();
+      }
+    }
+    document.getElementById('fs').addEventListener('click', toggleFullScreen);
+
+    const h = location.hash.replace('#','');
+    const start = parseInt(h, 10);
+    if(!Number.isNaN(start) && start>=1 && start<=slides.length) idx = start-1;
+    show(idx);
+  </script>
+</body>
+</html>
